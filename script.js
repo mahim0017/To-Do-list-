@@ -22,6 +22,18 @@ function showapp(arr) {
         for(const item of arr){
             let li = document.createElement("li")
             li.textContent = item;
+            li.style.margintop = "10px";
+            let button = document.createElement("button")
+            button.style.marginLeft = "10px";
+            button.innerHTML = `
+            <i class="fa-solid fa-trash"></i>
+            `;
+
+            button.addEventListener("click", function(){
+                arr.splice(arr.indexOf(item), 1);
+                deleteTask();
+            });
+            li.append(button);
             taskList.append(li);
         }
             
@@ -34,3 +46,7 @@ function showapp(arr) {
     }
 }
 showapp(task);
+
+function deleteTask() {
+    showapp(task);
+}
