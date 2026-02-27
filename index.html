@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple To Do</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+  <div class="bg-white p-6 rounded-xl shadow-lg w-80">
+    <h1 id="taskh1" class="text-2xl font-bold mb-4 text-center">To Do List</h1>
+
+    <div class="flex gap-2 mb-4">
+      <input id="taskInput" type="text" placeholder="Enter task..."
+        class="border p-2 rounded w-full">
+      <button id="taskBtn"
+        class="bg-blue-500 text-white px-4 rounded hover:bg-blue-600 cursor-pointer flex justify-center items-center gap-2">
+        Add <i class="fa-solid fa-circle-down"></i>
+      </button>
+    </div>
+
+    <ul id="taskList">
+
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
